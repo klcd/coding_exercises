@@ -8,17 +8,19 @@
 
 class Solution {
 public:
+
+
     int mySqrt(unsigned int x) {
 
-        for (unsigned int i = 0; i<=x; i++){
-            if (i*i>x){
-                return i-1;
-            } else if (i*i==x){
-                return i;
-            }
-        }
-
-        return 0;
+        //avoid division by 0
+        if(not x) return x;
+        
+        unsigned int r = x;
+        //condition avoids overflow
+        while (r > x/r)
+            r = (r + x/r) / 2;
+        return r;
+        
     }
 };
 // @lc code=end
