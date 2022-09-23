@@ -7,10 +7,15 @@ We then use the minimum of the parabula as the next point to evaluate the functi
 
 $$ g(t):=f(x_k+t) = f(x_k) + t f'(x_k) + \frac{1}{2} f''(x_k) t^2$$
 
-A value for $t$ is found by minimizing $g(t)$ by taking the first derivative
+A value for $t$ is found by minimizing $g(t)$ via the first derivative
 
-$$ 0 = f'(x_k) + t f''(x_k) \rightarrow t = - \frac{f'(x_k)}{f''(x_k)}$$
-We therefore define 
+$$ 0 = f'(x_k) + t f''(x_k) $$ 
+
+Therefor the distance to the minima is 
+
+$$ t = - \frac{f'(x_k)}{f''(x_k)} $$
+
+and we  define 
 
 $$x_{k+1} = x_k - \frac{f'(x_k)}{f''(x_k)}$$
 
